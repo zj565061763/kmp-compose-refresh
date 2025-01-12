@@ -1,0 +1,1 @@
+This is a Compose Multiplatform project targeting Android, iOS.
