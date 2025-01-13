@@ -1,4 +1,4 @@
-This is a Compose Multiplatform project targeting Android, iOS.
+Compose Multiplatform Pull-to-Refresh Library for Android and iOS.
 
 # Gradle
 
