@@ -16,7 +16,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.Dp
@@ -32,8 +31,8 @@ import com.sd.kmp.compose_refresh.RefreshInteraction
 fun DefaultRefreshIndicator(
   state: FRefreshState,
   modifier: Modifier = Modifier,
-  backgroundColor: Color = MaterialTheme.colorScheme.surface,
-  contentColor: Color = MaterialTheme.colorScheme.onSurface,
+  backgroundColor: Color = MaterialTheme.colorScheme.surfaceContainer,
+  contentColor: Color = contentColorFor(backgroundColor),
   strokeWidth: Dp = 2.dp,
   size: Dp = 40.dp,
   spinnerSize: Dp = size.times(0.5f),
@@ -95,7 +94,6 @@ private fun WrapperBox(
   backgroundColor: Color,
   content: @Composable () -> Unit,
 ) {
-  val shadowColor = contentColorFor(backgroundColor)
   Box(
     modifier = modifier.padding(padding),
     contentAlignment = Alignment.Center,
@@ -103,12 +101,6 @@ private fun WrapperBox(
     Box(
       modifier = Modifier
         .size(size)
-        .shadow(
-          elevation = 4.dp,
-          shape = CircleShape,
-          ambientColor = shadowColor,
-          spotColor = shadowColor,
-        )
         .background(backgroundColor, CircleShape),
       contentAlignment = Alignment.Center
     ) {

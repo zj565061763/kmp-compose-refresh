@@ -28,11 +28,15 @@ fun App() {
       }
 
       composable<AppRoute.SampleVertical> {
-        RouteSampleVertical()
+        RouteSampleVertical(
+          onClickBack = { navController.popBackStack() },
+        )
       }
 
       composable<AppRoute.SampleHorizontal> {
-        RouteSampleHorizontal()
+        RouteSampleHorizontal(
+          onClickBack = { navController.popBackStack() },
+        )
       }
     }
   }

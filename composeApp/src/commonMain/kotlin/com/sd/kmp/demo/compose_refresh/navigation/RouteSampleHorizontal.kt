@@ -2,6 +2,15 @@ package com.sd.kmp.demo.compose_refresh.navigation
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -18,48 +27,62 @@ import com.sd.kmp.demo.compose_refresh.PageViewModel
 import com.sd.kmp.demo.compose_refresh.RowView
 import com.sd.kmp.demo.compose_refresh.logMsg
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RouteSampleHorizontal(
   modifier: Modifier = Modifier,
-  vm: PageViewModel = viewModel(),
+  vm: PageViewModel = viewModel { PageViewModel() },
+  onClickBack: () -> Unit,
 ) {
   val uiState by vm.uiState.collectAsState()
 
   // start
-  val startRefreshState = rememberRefreshStateStart(uiState.isRefreshing) {
-    vm.refresh(10)
-  }
+  val startRefreshState = rememberRefreshStateStart(uiState.isRefreshing) { vm.refresh(10) }
 
   // end
-  val endRefreshState = rememberRefreshStateEnd(uiState.isLoadingMore) {
-    vm.loadMore()
-  }
+  val endRefreshState = rememberRefreshStateEnd(uiState.isLoadingMore) { vm.loadMore() }
 
   LaunchedEffect(vm) {
     vm.refresh(10)
   }
 
-  Box(
-    modifier = modifier
-      .fillMaxSize()
+  Scaffold(
+    modifier = modifier.fillMaxSize(),
+    topBar = {
+      TopAppBar(
+        title = { Text(text = "RouteSample") },
+        navigationIcon = {
+          IconButton(onClick = onClickBack) {
+            Icon(
+              imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+              contentDescription = "Back",
+            )
+          }
+        },
+      )
+    },
+  ) { padding ->
+    Box(
+      modifier = Modifier.fillMaxSize().padding(padding)
+        // start
+        .nestedScroll(startRefreshState.nestedScrollConnection)
+        // end
+        .nestedScroll(endRefreshState.nestedScrollConnection),
+    ) {
+      RowView(uiState.list)
+
       // start
-      .nestedScroll(startRefreshState.nestedScrollConnection)
+      FRefreshContainer(
+        state = startRefreshState,
+        modifier = Modifier.align(Alignment.CenterStart),
+      )
+
       // end
-      .nestedScroll(endRefreshState.nestedScrollConnection)
-  ) {
-    RowView(uiState.list)
-
-    // start
-    FRefreshContainer(
-      state = startRefreshState,
-      modifier = Modifier.align(Alignment.CenterStart),
-    )
-
-    // end
-    FRefreshContainer(
-      state = endRefreshState,
-      modifier = Modifier.align(Alignment.CenterEnd),
-    )
+      FRefreshContainer(
+        state = endRefreshState,
+        modifier = Modifier.align(Alignment.CenterEnd),
+      )
+    }
   }
 
   LaunchedEffect(startRefreshState) {

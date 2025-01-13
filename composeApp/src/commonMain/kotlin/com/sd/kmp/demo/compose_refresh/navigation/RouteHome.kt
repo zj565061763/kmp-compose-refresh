@@ -2,7 +2,9 @@ package com.sd.kmp.demo.compose_refresh.navigation
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -14,16 +16,17 @@ fun RouteHome(
   onClickSampleVertical: () -> Unit,
   onClickSampleHorizontal: () -> Unit,
 ) {
-  Column(
-    modifier = modifier.fillMaxSize(),
-    horizontalAlignment = Alignment.CenterHorizontally,
-  ) {
-    Button(onClick = onClickSampleVertical) {
-      Text(text = "SampleVertical")
-    }
-
-    Button(onClick = onClickSampleHorizontal) {
-      Text(text = "SampleHorizontal")
+  Scaffold(modifier = modifier.fillMaxSize()) { padding ->
+    Column(
+      modifier = Modifier.fillMaxSize().padding(padding),
+      horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+      Button(onClick = onClickSampleVertical) {
+        Text(text = "SampleVertical")
+      }
+      Button(onClick = onClickSampleHorizontal) {
+        Text(text = "SampleHorizontal")
+      }
     }
   }
 }
