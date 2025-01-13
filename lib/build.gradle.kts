@@ -24,7 +24,7 @@ kotlin {
     iosSimulatorArm64()
   ).forEach {
     it.binaries.framework {
-      baseName = "com.sd.lib.kmp.compose_refresh"
+      baseName = "com_sd_lib_kmp_compose_refresh"
       isStatic = true
     }
   }
