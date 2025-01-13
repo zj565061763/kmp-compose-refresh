@@ -1,4 +1,4 @@
-Compose Multiplatform Pull-to-Refresh Library for Android and iOS.
+Compose Multiplatform Pull-to-Refresh library for Android and iOS.
 
 # Gradle
 
