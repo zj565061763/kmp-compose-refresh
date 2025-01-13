@@ -1,4 +1,4 @@
-package com.sd.kmp.compose_refresh
+package com.sd.lib.kmp.compose_refresh
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
@@ -15,7 +15,7 @@ import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.LayoutDirection
-import com.sd.kmp.compose_refresh.indicator.DefaultRefreshIndicator
+import com.sd.lib.kmp.compose_refresh.indicator.DefaultRefreshIndicator
 
 @Composable
 fun FRefreshContainer(

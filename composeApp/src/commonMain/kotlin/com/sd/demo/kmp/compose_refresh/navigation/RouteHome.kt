@@ -1,4 +1,4 @@
-package com.sd.kmp.demo.compose_refresh.navigation
+package com.sd.demo.kmp.compose_refresh.navigation
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize

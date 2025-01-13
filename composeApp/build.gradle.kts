@@ -47,12 +47,12 @@ kotlin {
 }
 
 android {
-  namespace = "com.sd.kmp.demo.compose_refresh"
+  namespace = "com.sd.demo.kmp.compose_refresh"
   compileSdk = 34
   defaultConfig {
     minSdk = 21
     targetSdk = 34
-    applicationId = "com.sd.kmp.demo.compose_refresh"
+    applicationId = "com.sd.demo.kmp.compose_refresh"
     versionCode = 1
     versionName = "1.0"
   }

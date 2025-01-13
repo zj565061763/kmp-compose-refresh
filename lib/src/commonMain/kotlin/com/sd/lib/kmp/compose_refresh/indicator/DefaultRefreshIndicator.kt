@@ -1,4 +1,4 @@
-package com.sd.kmp.compose_refresh.indicator
+package com.sd.lib.kmp.compose_refresh.indicator
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.foundation.background
@@ -20,9 +20,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.sd.kmp.compose_refresh.FRefreshState
-import com.sd.kmp.compose_refresh.RefreshDirection
-import com.sd.kmp.compose_refresh.RefreshInteraction
+import com.sd.lib.kmp.compose_refresh.FRefreshState
+import com.sd.lib.kmp.compose_refresh.RefreshDirection
+import com.sd.lib.kmp.compose_refresh.RefreshInteraction
 
 /**
  * 默认的刷新指示器

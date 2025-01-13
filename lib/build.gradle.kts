@@ -24,7 +24,7 @@ kotlin {
     iosSimulatorArm64()
   ).forEach {
     it.binaries.framework {
-      baseName = "com.sd.kmp.compose_refresh"
+      baseName = "com.sd.lib.kmp.compose_refresh"
       isStatic = true
     }
   }
@@ -37,7 +37,7 @@ kotlin {
 }
 
 android {
-  namespace = "com.sd.kmp.compose_refresh"
+  namespace = "com.sd.lib.kmp.compose_refresh"
   compileSdk = 34
   defaultConfig {
     minSdk = 21

@@ -1,14 +1,14 @@
-package com.sd.kmp.demo.compose_refresh
+package com.sd.demo.kmp.compose_refresh
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.sd.kmp.demo.compose_refresh.navigation.AppRoute
-import com.sd.kmp.demo.compose_refresh.navigation.RouteHome
-import com.sd.kmp.demo.compose_refresh.navigation.RouteSampleHorizontal
-import com.sd.kmp.demo.compose_refresh.navigation.RouteSampleVertical
+import com.sd.demo.kmp.compose_refresh.navigation.AppRoute
+import com.sd.demo.kmp.compose_refresh.navigation.RouteHome
+import com.sd.demo.kmp.compose_refresh.navigation.RouteSampleHorizontal
+import com.sd.demo.kmp.compose_refresh.navigation.RouteSampleVertical
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable

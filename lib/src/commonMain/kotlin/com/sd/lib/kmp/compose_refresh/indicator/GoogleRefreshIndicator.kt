@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.sd.kmp.compose_refresh.indicator
+package com.sd.lib.kmp.compose_refresh.indicator
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.animation.core.LinearEasing

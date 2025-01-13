@@ -1,4 +1,4 @@
-package com.sd.kmp.compose_refresh
+package com.sd.lib.kmp.compose_refresh
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.VectorConverter

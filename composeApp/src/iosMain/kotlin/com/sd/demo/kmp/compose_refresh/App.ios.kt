@@ -1,4 +1,4 @@
-package com.sd.kmp.demo.compose_refresh
+package com.sd.demo.kmp.compose_refresh
 
 import platform.Foundation.NSLog
 

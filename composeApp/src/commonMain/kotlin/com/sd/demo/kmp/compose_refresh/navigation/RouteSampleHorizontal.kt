@@ -1,4 +1,4 @@
-package com.sd.kmp.demo.compose_refresh.navigation
+package com.sd.demo.kmp.compose_refresh.navigation
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,12 +20,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.sd.kmp.compose_refresh.FRefreshContainer
-import com.sd.kmp.compose_refresh.rememberRefreshStateEnd
-import com.sd.kmp.compose_refresh.rememberRefreshStateStart
-import com.sd.kmp.demo.compose_refresh.PageViewModel
-import com.sd.kmp.demo.compose_refresh.RowView
-import com.sd.kmp.demo.compose_refresh.logMsg
+import com.sd.demo.kmp.compose_refresh.PageViewModel
+import com.sd.demo.kmp.compose_refresh.RowView
+import com.sd.demo.kmp.compose_refresh.logMsg
+import com.sd.lib.kmp.compose_refresh.FRefreshContainer
+import com.sd.lib.kmp.compose_refresh.rememberRefreshStateEnd
+import com.sd.lib.kmp.compose_refresh.rememberRefreshStateStart
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
