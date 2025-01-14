@@ -20,6 +20,7 @@ class PageViewModel : ViewModel() {
    * 刷新
    */
   fun refresh(count: Int) {
+    logMsg { "${this@PageViewModel} refresh" }
     viewModelScope.launch {
       _mutator.mutate { refreshData(count = count) }
     }
@@ -29,6 +30,7 @@ class PageViewModel : ViewModel() {
    * 加载更多
    */
   fun loadMore() {
+    logMsg { "${this@PageViewModel} loadMore" }
     viewModelScope.launch {
       _mutator.mutate { loadMoreData() }
     }
@@ -59,6 +61,10 @@ class PageViewModel : ViewModel() {
     } finally {
       _uiState.update { it.copy(isLoadingMore = false) }
     }
+  }
+
+  override fun onCleared() {
+    logMsg { "${this@PageViewModel} onCleared" }
   }
 }
 

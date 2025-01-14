@@ -38,10 +38,10 @@ kotlin {
       implementation(compose.material3)
       implementation(compose.components.resources)
       implementation(compose.components.uiToolingPreview)
-      implementation(libs.androidx.lifecycle.viewmodel)
-      implementation(libs.androidx.lifecycle.runtime.compose)
-      implementation(libs.androidx.navigation.compose)
-      implementation(libs.kotlinx.serialization.json)
+      implementation(libs.kmp.androidx.lifecycle.viewmodel)
+      implementation(libs.kmp.androidx.lifecycle.runtime.compose)
+      implementation(libs.kmp.androidx.navigation.compose)
+      implementation(libs.kmp.kotlinx.serialization.json)
     }
   }
 }
