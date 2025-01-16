@@ -50,7 +50,7 @@ fun RouteSampleVertical(
     modifier = modifier.fillMaxSize(),
     topBar = {
       TopAppBar(
-        title = { Text(text = "RouteSample") },
+        title = { Text(text = "SampleVertical") },
         navigationIcon = {
           IconButton(onClick = onClickBack) {
             Icon(
