@@ -2,7 +2,6 @@ package com.sd.demo.kmp.compose_refresh
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -16,7 +15,6 @@ import com.sd.lib.kmp.compose_refresh.FRefreshContainer
 import com.sd.lib.kmp.compose_refresh.rememberRefreshStateBottom
 import com.sd.lib.kmp.compose_refresh.rememberRefreshStateTop
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RouteSampleVertical(
   vm: PageViewModel = viewModel { PageViewModel() },
