@@ -1,4 +1,4 @@
-package com.sd.demo.kmp.compose_refresh.navigation
+package com.sd.demo.kmp.compose_refresh
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,9 +20,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.sd.demo.kmp.compose_refresh.ColumnView
-import com.sd.demo.kmp.compose_refresh.PageViewModel
-import com.sd.demo.kmp.compose_refresh.logMsg
 import com.sd.lib.kmp.compose_refresh.FRefreshContainer
 import com.sd.lib.kmp.compose_refresh.rememberRefreshStateBottom
 import com.sd.lib.kmp.compose_refresh.rememberRefreshStateTop

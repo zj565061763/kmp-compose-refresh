@@ -5,10 +5,6 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.sd.demo.kmp.compose_refresh.navigation.AppRoute
-import com.sd.demo.kmp.compose_refresh.navigation.RouteHome
-import com.sd.demo.kmp.compose_refresh.navigation.RouteSampleHorizontal
-import com.sd.demo.kmp.compose_refresh.navigation.RouteSampleVertical
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -26,13 +22,11 @@ fun App() {
           onClickSampleHorizontal = { navController.navigate(AppRoute.SampleHorizontal) },
         )
       }
-
       composable<AppRoute.SampleVertical> {
         RouteSampleVertical(
           onClickBack = { navController.popBackStack() },
         )
       }
-
       composable<AppRoute.SampleHorizontal> {
         RouteSampleHorizontal(
           onClickBack = { navController.popBackStack() },

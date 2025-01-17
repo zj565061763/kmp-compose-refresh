@@ -1,4 +1,4 @@
-package com.sd.demo.kmp.compose_refresh.navigation
+package com.sd.demo.kmp.compose_refresh
 
 import kotlinx.serialization.Serializable
 
