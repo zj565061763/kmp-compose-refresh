@@ -7,5 +7,5 @@ Compose Multiplatform Pull-to-Refresh library.
 # Gradle
 
 ```kotlin
-implementation("io.github.zj565061763.kmp:compose-refresh:1.0.0")
+implementation("io.github.zj565061763.kmp:compose-refresh:1.1.0")
 ```
